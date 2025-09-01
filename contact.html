@@ -5,61 +5,28 @@
   <title>Contact | Piyush Rajput</title>
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { 
-      font-family: 'Segoe UI', sans-serif; 
-      background:#ececec; 
-      text-align:center; 
-      color:#333;
-    }
-    header { 
-      background:#222; 
-      padding:20px; 
-      position:fixed; 
-      top:0; 
-      width:100%; 
-      z-index:1000;
-    }
-    nav a { 
-      color:white; 
-      margin:0 15px; 
-      text-decoration:none; 
-      font-weight:bold; 
-      transition:0.3s;
-    }
+    body { font-family: 'Segoe UI', sans-serif; background:#ececec; text-align:center; color:#333; }
+    header { background:#222; padding:20px; position:fixed; top:0; width:100%; z-index:1000; }
+    nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; transition:0.3s; }
     nav a:hover { color:#ff6600; }
-    section { 
-      padding:120px 20px; 
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    form { 
-      background:white; 
-      padding:20px; 
-      border-radius:10px; 
-      display:inline-block; 
-      margin-top:30px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    }
-    input,textarea { 
-      width:300px; 
-      padding:10px; 
-      margin:10px; 
-      border-radius:5px; 
-      border:1px solid #ccc; 
-    }
-    button { 
-      padding:10px 20px; 
-      background:#0072ff; 
-      color:white; 
-      border:none; 
-      border-radius:5px; 
-      cursor:pointer; 
-      transition:0.3s;
-    }
+    section { padding:120px 20px; animation: fadeIn 1.5s ease-in-out; }
+    form { background:white; padding:20px; border-radius:10px; display:inline-block; margin-top:30px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+    input,textarea { width:300px; padding:10px; margin:10px; border-radius:5px; border:1px solid #ccc; }
+    button { padding:10px 20px; background:#0072ff; color:white; border:none; border-radius:5px; cursor:pointer; transition:0.3s; }
     button:hover { background:#0055cc; }
 
-    @keyframes fadeIn {
-      from { opacity:0; transform:translateY(30px); }
-      to { opacity:1; transform:translateY(0); }
+    /* Social Icons */
+    .social-icons { margin-top:20px; }
+    .social-icons a { margin:0 10px; display:inline-block; }
+    .social-icons img { width:40px; height:40px; transition: transform 0.3s; }
+    .social-icons img:hover { transform: scale(1.2); }
+
+    @keyframes fadeIn { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+
+    @media(max-width:600px){
+      input,textarea { width:90%; }
+      h1 { font-size:28px; }
+      .social-icons img { width:30px; height:30px; }
     }
   </style>
 </head>
@@ -71,6 +38,7 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <section>
     <h1>Contact Me</h1>
     <form>
@@ -79,10 +47,18 @@
       <textarea placeholder="Your Message" rows="5"></textarea><br>
       <button type="submit">Send</button>
     </form>
-    <p style="margin-top:20px;">Or connect on 👉 
-      <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a> | 
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-    </p>
+
+    <div class="social-icons">
+      <a href="https://instagram.com/yourusername" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/40/0072ff/instagram-new.png" alt="Instagram"/>
+      </a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/40/0072ff/linkedin.png" alt="LinkedIn"/>
+      </a>
+      <a href="https://github.com/piyushrajput649" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/40/0072ff/github.png" alt="GitHub"/>
+      </a>
+    </div>
   </section>
 </body>
 </html>
