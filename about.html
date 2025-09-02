@@ -33,18 +33,52 @@
     }
     h1 { font-size:40px; margin-bottom:20px; }
     p { font-size:18px; }
+    ul { margin-top:10px; }
+    li { margin:5px 0; }
 
     @keyframes fadeIn {
       from { opacity:0; transform:translateY(30px); }
       to { opacity:1; transform:translateY(0); }
     }
+
+    @media(max-width:600px){
+      h1 { font-size:32px; }
+      p { font-size:16px; }
+      nav a { margin:0 8px; }
+    }
   </style>
 </head>
-<section>
-  <h1>About Me</h1>
-  <img src="https://via.placeholder.com/200" alt="My Photo" style="border-radius:50%; margin:20px;">
-  <p>My name is <b>Piyush Rajput</b>.  
-  I am currently a student, exploring coding & web development 🚀</p>
-</section>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main About Section -->
+  <section>
+    <h1>About Me</h1>
+    <img src="https://i.postimg.cc/XJh2K0ng/IMG-1438-1.jpg" alt="My Photo" style="border-radius:50%; margin:20px; width:200px; height:200px;">
+    <p>My name is <b>Piyush Rajput</b>.  
+    I am currently a student, exploring coding & web development 🚀</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section>
+    <h2>My Skills</h2>
+    <ul style="list-style:none; padding:0; font-size:18px;">
+      <li>💻 HTML & CSS</li>
+      <li>⚡ JavaScript</li>
+      <li>🌐 Web Development</li>
+    </ul>
+  </section>
+
+  <!-- Hobbies Section -->
+  <section>
+    <h2>My Hobbies</h2>
+    <p>🎵 Listening music | 🎮 Gaming | 📚 Reading</p>
+  </section>
 </body>
 </html>
