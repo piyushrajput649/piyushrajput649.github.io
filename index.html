@@ -8,6 +8,9 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/4b7a9e6c5f.js" crossorigin="anonymous"></script>
+
   <style>
     /* General Styles */
     body {
@@ -56,16 +59,59 @@
 
     .section {
       background: white;
-      padding: 30px;
+      padding: 40px;
       margin: 30px auto;
-      max-width: 800px;
+      max-width: 900px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1, h2 {
-      text-align: center;
       margin-bottom: 20px;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #007BFF;
+      margin-bottom: 20px;
+    }
+
+    /* Social Icons (circle buttons) */
+    .social-icons a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      margin: 0 10px;
+      border-radius: 50%;
+      font-size: 24px;
+      color: white;
+      background: #333;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-icons a.github:hover {
+      background: #000; /* GitHub black */
+    }
+
+    .social-icons a.linkedin:hover {
+      background: #0A66C2; /* LinkedIn blue */
+    }
+
+    .social-icons a.instagram:hover {
+      background: #E4405F; /* Instagram pink */
     }
 
     footer {
@@ -83,6 +129,16 @@
     a:hover {
       color: #0056b3;
     }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .section {
+        padding: 20px;
+      }
+      nav a {
+        margin: 0 8px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -98,33 +154,38 @@
 
   <!-- Home Section -->
   <div id="home" class="section">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hello! I am <b>Piyush Rajput</b>, a student and creator passionate about learning and building new things.</p>
+  
+    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+    <h1>Hello, I'm <span style="color:#007BFF;">Piyush Rajput</span></h1>
+    <p>A student, creator, and future developer ✨</p>
+    <div class="social-icons">
+      <a href="https://github.com/piyushrajput649" target="_blank" class="github"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+    </div>
   </div>
 
   <!-- About Section -->
   <div id="about" class="section">
     <h2>About Me</h2>
-    <p>I am currently pursuing my 12th standard with Arts stream. I enjoy working on web design, content creation, and exploring new technologies. Always learning, always growing ✨</p>
+    <p>I am currently pursuing my 12th standard with Arts stream. I love exploring new technologies, web design, and creating engaging content. Always learning, always growing 🌱</p>
   </div>
 
   <!-- Projects Section -->
   <div id="projects" class="section">
     <h2>My Projects</h2>
-    <p>Here are some of my works:</p>
-    <ul>
-      <li><a href="https://github.com/piyushrajput649" target="_blank">GitHub Projects</a></li>
-      <li>Personal Website (this one!)</li>
+    <ul style="list-style:none; padding:0;">
+      <li>📌 <a href="https://github.com/piyushrajput649" target="_blank">GitHub Projects</a></li>
+      <li>📌 Personal Portfolio Website (this one!)</li>
     </ul>
   </div>
 
   <!-- Contact Section -->
   <div id="contact" class="section">
     <h2>Contact Me</h2>
-    <p>You can reach me via:</p>
     <p>📧 <a href="mailto:rajputpiyush36734@gmail.com">rajputpiyush36734@gmail.com</a></p>
     <p>💻 <a href="https://github.com/piyushrajput649" target="_blank">GitHub Profile</a></p>
-    <p>🔗 <a href="https://linkedin.com" target="_blank">LinkedIn (add your link)</a></p>
+    <p>🔗 <a href="https://linkedin.com" target="_blank">LinkedIn (update your link)</a></p>
   </div>
 
   <!-- Footer -->
@@ -133,3 +194,4 @@
   </footer>
 </body>
 </html>
+
