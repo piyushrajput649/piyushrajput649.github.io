@@ -2,62 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome | Piyush Rajput</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piyush Rajput | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { 
-      font-family: 'Segoe UI', sans-serif; 
-      background: linear-gradient(to right, #00c6ff, #0072ff); 
-      color:white; 
-      text-align:center; 
-      overflow-x:hidden;
-    }
-    header { 
-      background:rgba(0,0,0,0.7); 
-      padding:20px; 
-      position:fixed; 
-      top:0; 
-      width:100%; 
-      z-index:1000;
-    }
-    nav a { 
-      color:white; 
-      margin:0 15px; 
-      text-decoration:none; 
-      font-weight:bold; 
-      transition:0.3s;
-    }
-    nav a:hover { color:#ffcc00; }
-    section { 
-      padding:120px 20px; 
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    h1 { font-size:50px; margin-bottom:20px; }
-    p { font-size:20px; }
-
-    @keyframes fadeIn {
-      from { opacity:0; transform:translateY(30px); }
-      to { opacity:1; transform:translateY(0); }
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f4f4f9, #e0eafc);
+      color: #333;
+      scroll-behavior: smooth;
     }
 
-    @media(max-width:600px){
-      h1 { font-size:32px; }
-      p { font-size:16px; }
-      nav a { margin:0 8px; }
+    header {
+      background: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      text-align: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 15px;
+      position: relative;
+      font-weight: 600;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #007BFF;
+      left: 0;
+      bottom: -4px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .section {
+      background: white;
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: white;
+      margin-top: 30px;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+    }
+
+    a {
+      color: #007BFF;
+    }
+
+    a:hover {
+      color: #0056b3;
     }
   </style>
-</head><meta name="p:domain_verify" content="bc9fe754b8eb76c8a1072977c860e1b2"/>
+</head>
 <body>
+  <!-- Header / Navigation -->
   <header>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
-  <section>
-    <h1>🚀 Welcome to My Website</h1>
-    <p>Hello! I am <b>Piyush Rajput</b>, a student learning web development.</p>
-  </section>
+
+  <!-- Home Section -->
+  <div id="home" class="section">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hello! I am <b>Piyush Rajput</b>, a student and creator passionate about learning and building new things.</p>
+  </div>
+
+  <!-- About Section -->
+  <div id="about" class="section">
+    <h2>About Me</h2>
+    <p>I am currently pursuing my 12th standard with Arts stream. I enjoy working on web design, content creation, and exploring new technologies. Always learning, always growing ✨</p>
+  </div>
+
+  <!-- Projects Section -->
+  <div id="projects" class="section">
+    <h2>My Projects</h2>
+    <p>Here are some of my works:</p>
+    <ul>
+      <li><a href="https://github.com/piyushrajput649" target="_blank">GitHub Projects</a></li>
+      <li>Personal Website (this one!)</li>
+    </ul>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p>You can reach me via:</p>
+    <p>📧 <a href="mailto:rajputpiyush36734@gmail.com">rajputpiyush36734@gmail.com</a></p>
+    <p>💻 <a href="https://github.com/piyushrajput649" target="_blank">GitHub Profile</a></p>
+    <p>🔗 <a href="https://linkedin.com" target="_blank">LinkedIn (add your link)</a></p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Piyush Rajput | All Rights Reserved</p>
+  </footer>
 </body>
 </html>
